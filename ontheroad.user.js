@@ -756,7 +756,7 @@ function wrapper(plugin_info) {
 		window.plugin.ontheroad.getRoadPoints();
 		$.each(window.plugin.ontheroad.roadpoints.bookmarks, function(bid, record) {
 			menu_options += '<option value="' + bid + '">' + record.label + '</option>';
-			menu_items.bookmarks += '<input type="checkbox" class="otr-waypoint-add" value="' + bid +'" /> '+ record.label + '&nbsp;/&nbsp;';
+			menu_items.bookmarks += '<input type="checkbox" class="otr-waypoint-add" value="' + bid +'" /> '+ record.label + '&nbsp<BR>';
 		});
 		if ((Object.keys(window.plugin.ontheroad.roadpoints.bookmarks).length > 0) && ( Object.keys(window.plugin.ontheroad.roadpoints.reswue).length > 0)) {
 			menu_options = '<optgroup label="Bookmarks">' + menu_options + '</optgroup>';
@@ -771,7 +771,7 @@ function wrapper(plugin_info) {
 				menu_options += '<optgroup label=" Portals">';
 				$.each(record.portals, function(pid, portal) {
 					menu_options += '<option value="' + pid + '">' + portal.label + '</option>';
-					menu_items.portals += '<input type="checkbox" class="otr-waypoint-add" value="' + pid +'" /> '+ portal.label + '&nbsp;/&nbsp;';
+					menu_items.portals += '<input type="checkbox" class="otr-waypoint-add" value="' + pid +'" /> '+ portal.label + '&nbsp<BR>';
 				});
 				menu_options += '</optgroup>';
 			}
@@ -780,7 +780,7 @@ function wrapper(plugin_info) {
 				menu_options += '<optgroup label=" Alerts">';
 				$.each(record.alerts, function(aid, alert) {
 					menu_options += '<option value="' + aid + '">' + alert.label + '</option>';
-					menu_items.alerts += '<input type="checkbox" class="otr-waypoint-add" value="' + aid +'" /> '+ alert.label + '&nbsp;/&nbsp;';
+					menu_items.alerts += '<input type="checkbox" class="otr-waypoint-add" value="' + aid +'" /> '+ alert.label + '&nbsp<BR>';
 				});
 				menu_options += '</optgroup>';
 			}
